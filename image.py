@@ -1,1 +1,1 @@
-predict_step(['C:\Users\jayal\OneDrive\Pictures\download.jpeg'])
+predict_step([r'C:\Users\jayal\OneDrive\Pictures\download.jpeg'])
