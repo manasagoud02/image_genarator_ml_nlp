@@ -7,7 +7,7 @@ def predict_step(image_paths):
 
     images.append(i_image)
 
-  pixel_values=feature_extracter(images=images, return_tensors="pt").pixel_values
+  pixel_values=feature_extractor(images=images, return_tensors="pt").pixel_values
   pixel_values=pixel_values.to(device)
 
   output_ids=model.generate(pixel_values, **gen_kwargs)
@@ -15,3 +15,5 @@ def predict_step(image_paths):
   preds=tokenizer.batch_decode(output_ids, skip_special_tokens=True)
   preds=[pred.strip() for pred in preds]
   return preds
+
+
